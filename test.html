@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>多行滚动jQuery循环新闻列表代码</title>
+
+<style type="text/css">
+#newsbox{
+height:125px;
+overflow:hidden;
+border:1px solid #333;
+width:350px;
+margin:0 auto;
+}
+#newslist{
+background:#CCC;
+margin:0px;
+padding:0px;
+list-style-type:none;
+}
+#newslist li{
+line-height:25px;
+text-align:left;
+padding-left:15px;
+}
+#newsbox2{
+height:125px;
+overflow:hidden;
+border:1px solid #333;
+width:350px;
+margin:0 auto;
+}
+#newslist2{
+background:#CCC;
+margin:0px;
+padding:0px;
+list-style-type:none;
+}
+#newslist2 li{
+line-height:25px;
+text-align:left;
+padding-left:15px;
+}
+</style>
+
+<script src="javascript100.js" type="text/javascript"></script>
+<script type="text/javascript">
+js100(function(){
+	Javascript100.scroll({box:"newsbox",list:"newslist",direction:"top",spacing:1000});
+	Javascript100.scroll({box:"newsbox2",list:"newslist2",direction:"top",spacing:1000});
+});
+</script>
+</head>
+
+<body>
+<p>多行滚动演示：</p>
+
+<div id="newsbox">
+	<ul id="newslist">
+		<li>1我是javasscript100插件无缝滚动功能</li>
+		<li>2我是无缝滚动的哦</li>
+		<li>3我的滚动间隔是3秒</li>
+		<li>4我没有拖动按钮</li>
+		<li>5我的滚动方向是从上向下滚动的</li>
+		<li>6我是javasscript100插件无缝滚动功能</li>
+		<li>7我是javasscript100插件无缝滚动功能</li>
+		<li>8我是javasscript100插件无缝滚动功能</li>
+		<li>9我是javasscript100插件无缝滚动功能</li>
+		<li>10我是javasscript100插件无缝滚动功能</li>
+	</ul>
+</div>
+<br /><br /><br /><br /><br /><br />
+<div id="newsbox2">
+	<ul id="newslist2">
+		<li>1我是javasscript100插件无缝滚动功能</li>
+		<li>2我是无缝滚动的哦</li>
+		<li>3我的滚动间隔是3秒</li>
+		<li>4我没有拖动按钮</li>
+		<li>5我的滚动方向是从上向下滚动的</li>
+		<li>6我是javasscript100插件无缝滚动功能</li>
+		<li>7我是javasscript100插件无缝滚动功能</li>
+		<li>8我是javasscript100插件无缝滚动功能</li>
+		<li>9我是javasscript100插件无缝滚动功能</li>
+		<li>10我是javasscript100插件无缝滚动功能</li>
+	</ul>
+</div>
+
+</body>
+</html>

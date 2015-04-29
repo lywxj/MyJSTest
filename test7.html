@@ -1,0 +1,55 @@
+<head>
+<style type="text/css">
+.tabBox .hd{ height:40px; line-height:40px; padding:0 10px; font-size:20px; background:#f4f4f4; border-bottom:1px solid #F5AB38; position:relative;  }
+.tabBox .hd ul{ position:absolute; height:41px; top:0; overflow:hidden;  }
+.tabBox .hd ul li{ float:left; padding:0 10px; color:#666;  }
+.tabBox .hd ul .on{ border:2px solid #F5AB38; border-bottom-color:#fff; background:#fff; color:#CF7F21;   }
+.tabBox .bd ul{ padding:10px 0 10px 10px;  }
+.tabBox .bd li{ height:33px; line-height:33px;   }
+.tabBox .bd li a{ color:#666;  }
+</style>
+<script type="text/javascript" src="TouchSlide.1.0.js"></script>
+</head>
+
+<body>
+<a href="http://www.baidu.com/" target="_blank"><input name="" type="button" class="but02" value="跳转" /></a>
+<div class='inimg ' id='sep'>
+	<div class='sbd'>
+		<ul>
+			<li>
+				<a href="#"><img src="css/images/index_title.jpg" /></a>
+				<a class="tit" href="#">嵌入式系统全面助理各行业1</a>
+			</li>
+			<li>
+				<a href="#"><img src="css/images/index_title1.jpg" /></a>
+				<a class="tit" href="#">嵌入式系统全面助理各行业2</a>
+			</li>
+			<li>
+				<a href="#"><img src="css/images/index_title2.jpg" /></a>
+				<a class="tit" href="#">嵌入式系统全面助理各行业3</a>
+			</li>
+			<li>
+				<a href="#"><img src="css/images/index_title3.jpg" /></a>
+				<a class="tit" href="#">嵌入式系统全面助理各行业4</a>
+			</li>
+		</ul>
+	</div>
+	<div class="shd">
+		<ul></ul>
+	</div>
+	
+</div>
+<script type="text/javascript">TouchSlide({ slideCell:"#sep" });</script>
+<script type="text/javascript">
+							TouchSlide({ 
+							slideCell:"#sep",
+							titCell:".shd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+							mainCell:".sbd ul", 
+							effect:"leftLoop", 
+							autoPage:true,//自动分页
+							autoPlay:true //自动播放
+							});
+							var sep = document.getElementById('sep');
+							sep.addEventListener('touchmove', function(e){e.stopPropagation(); }, false);
+		</script>
+</body>

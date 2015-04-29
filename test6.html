@@ -1,0 +1,63 @@
+<head>
+<style type="text/css">
+.hello{
+	height:100px;
+	width:100px;
+	position:absolute;
+}
+.hello1{
+	background-color:red;
+}
+.hello2{
+	background-color:blue;
+}
+.hello3{
+	background-color:green;
+}
+.hello4{
+	background-color:yellow;
+}
+</style>
+<script type=text/javascript src="jquery-1.9.1.min.js"></script>
+<SCRIPT type=text/javascript>
+function change(dname){
+	$("#"+dname).css('z-index','10')
+}
+function zidong(){
+	var n = 1;
+	alert(n);
+	for(i=0;i<$("#box").children().length;i++){
+		alert(111);
+		$("#box").children()[i].setAttribute('style','z-index:'+String(n)+';');
+	}
+}
+window.onload = function(){
+	window.setTimeout(zidong,1000);
+}
+</SCRIPT>
+</head>
+
+<body>
+<a href="http://www.baidu.com/" target="_blank"><input name="" type="button" class="but02" value="Ìø×ª" /></a>
+<div id="box">
+	<div class="hello hello1" id="div1">
+	<span>div1</span>
+	</div>
+	<div class="hello hello2" id="div2">
+	<span>div2</span>
+	</div>
+	<div class="hello hello3" id="div3">
+	<span>div3</span>
+	</div>
+	<div class="hello hello4" id="div4">
+	<span>div4</span>
+	</div>
+</div>
+<br /><br /><br /><br /><br /><br /><br />
+<div>
+<input type="button" value="div1" onclick="change('div1')"/>
+<input type="button" value="div2" onclick="change('div2')"/>
+<input type="button" value="div3" onclick="change('div3')"/>
+<input type="button" value="div4" onclick="change('div4')"/>
+</div>
+</body>

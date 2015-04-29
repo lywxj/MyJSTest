@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body,td,th {
+ font-size: 12px;
+}
+a {
+ font-size: 12px;
+ color: #09C;
+}
+a:link {
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+ color: #09C;
+}
+a:hover {
+ text-decoration: underline;
+ color: #930;
+}
+a:active {
+ text-decoration: none;
+ color: #09C;
+}
+*{ margin:0; padding:0;}
+.header{
+ height:60px;
+ background-color:#666;
+ color:#FFF;
+ }
+.header h1{
+ padding:6px 0;
+ } 
+.demo{
+ width:300px;
+ height:100px;
+ overflow:hidden;
+ float:left;
+ margin:100px 0 0 100px;
+ border:1px solid #09F;
+ padding:10px;
+ }
+.demo ul{
+   list-style:none;
+   height:auto;
+}
+.demo ul li{
+ height:24px;
+ line-height:24px;
+ }
+
+</style>
+<script type=text/javascript src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+   (function($) {
+  $.fn.myScroll = function(options) {
+
+    //默认配置
+    var defaults = {
+      speed: 40,
+      //滚动速度,值越大速度越慢
+      rowHeight: 24 //每行的高度
+    };
+
+    var opts = $.extend({}, defaults, options),
+        intId = [];
+
+    function marquee(obj, step) {
+      obj.find("ul").animate({
+        marginTop: '-=1'
+      }, 0, function() {
+        var s = Math.abs(parseInt($(this).css("margin-top")));
+        if (s >= step) {
+          $(this).find("li").slice(0, 1).appendTo($(this));
+          $(this).css("margin-top", 0);
+        }
+      });
+    }
+
+
+    this.each(function(i) {
+      var sh = opts["rowHeight"],
+          speed = opts["speed"],
+          _this = $(this);
+
+      intId[i] = setInterval(function() {
+        marquee(_this, sh);
+      }, speed);
+
+      _this.hover(function() {
+        clearInterval(intId[i]);
+      }, function() {
+        intId[i] = setInterval(function() {
+          marquee(_this, sh);
+        }, speed);
+      });
+
+    });
+
+  }
+})(jQuery);
+  
+   $(function(){
+     $("div.demo").myScroll({
+          speed:40,
+          rowHeight:24
+          });
+     });
+</script> 
+
+ 
+</head>
+<body>
+<div class="header">
+<h1>jquery文字无缝滚动插件</h1>
+</div>
+<div class="demo">
+<ul>
+  <li><span>1仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>2仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>3仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>4仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>5仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>6仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>7仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>8仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>9仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+</ul>
+</div>
+
+
+<div class="demo">
+<ul>
+  <li><span>1仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>2仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>3仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>4仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>5仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>6仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>7仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>8仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+  <li><span>9仿webqq桌面效果</span><span>新疆维吾尔自治区哈拉市</span><span>2013/12/8</span></li>
+</ul>
+</div>
+</body>
+</html>

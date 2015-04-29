@@ -1,0 +1,45 @@
+<head>
+<style type="text/css">
+#box{ margin:0 auto; width:300px;}
+.dice{
+	width:187px;
+	height:165px; 
+	background: url("dice.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-position: 0 -165px;
+	}
+.s_btn{ font-size:16px;}
+.s_font {color:red;}
+</style>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+window.arr = ["0", "-165", "-330", "-495", "-660", "-825"];
+window.value_dict = {"0px 0px":1, "0px -165px":2, "0px -330px":3, "0px -495px":4, "0px -660px":5, "0px -825px":6};
+function change(){
+	y_axis = arr[Math.floor(Math.random()*arr.length)];
+	$("#id_dice").css('backgroundPosition','0px ' + y_axis + 'px');
+}
+
+function dstart(){
+	if($("#s_button").val()=="开始"){
+		$("#s_button").val('停止');
+		window.myMar = setInterval(change,100); //开始背景变化
+	}else{
+		clearInterval(myMar); //停止背景变化
+		change(); //最后取值
+		value = value_dict[$("#id_dice").css('backgroundPosition')];
+		$("#values").text(value);
+		$("#s_button").val('开始');
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="box">
+	<div class="dice" id="id_dice">
+		
+	</div>
+	<input type="button" id="s_button" value="开始" class="s_btn" onclick="dstart()" />
+	<h2>您摇出&nbsp;<font id="values" class="s_font">1</font></h2>
+</div>
+</body>

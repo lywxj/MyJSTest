@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>地图弹出</title>
+<style type="text/css">
+* { margin:0; padding:0; list-style:none; font-size:12px; line-height:20px;}
+a:link,a:visited{color:#164A84;text-decoration:none;}
+a:hover,a:active{color:#c00;text-decoration:underline;}
+.china {border:1px solid #c00; margin:50px;width:626px;height:518px;background:url(images/map.jpg) no-repeat 0 0;overflow:hidden;position:relative; float:left;}
+.postion {position:absolute;}
+.postion img {opacity:0.2;filter:alpha(opacity=30);border:0;}
+.point {width:0;height:0;position:absolute;left:27px;top:33px;width:0;height:0;}
+.point ul { display:none;}
+.list { position:absolute; left:5px;top:5px;width:150px; padding:5px;background:#fff;border:1px solid #c00;}
+.list li { float:left; padding:0 5px;width:40px;}
+.on img {opacity:1.0;filter:alpha(opacity=100);}
+.on ul { display:block;}
+.ah {left:462px;top:275px;} .ah .point {left:-140px;}
+.hn {left:390px;top:345px;}
+.sc {left:251px;top:287px;} .sc .point {left:-130px;top:60px;}
+</style>
+<base target="_blank" />
+</head>
+
+<body>
+
+<div class="china">
+	<div class="postion ah">
+		<img src="images/ah.png" alt="" usemap="#MapAh" />
+		<map name="MapAh" id="MapAh">
+		  <area shape="poly" coords="15,3,23,9,31,10,35,21,39,27,44,24,46,24,42,30,42,35,42,41,48,43,53,47,53,52,51,58,48,60,44,67,16,65,12,55,11,49,7,47,11,41,10,36,8,33,3,31,3,23,5,16,5,13" href="http://hf.bitauto.com" alt="安徽" id="ah_hot" />
+		</map>
+		<div class="point">
+			<ul class="list">
+				<li><a href="http://city.bitauto.com/anqing/">安庆</a></li>
+				<li><a href="http://city.bitauto.com/bengbu/">蚌埠</a></li>
+				<li><a href="http://city.bitauto.com/bozhou/">亳州</a></li>
+				<li><a href="http://city.bitauto.com/chaohu/">巢湖</a></li>
+				<li><a href="http://city.bitauto.com/chizhou/">池州</a></li>
+				<li><a href="http://city.bitauto.com/chuzhou/">滁州</a></li>
+				<li><a href="http://city.bitauto.com/fuyang/">阜阳</a></li>
+				<li><a href="http://hefei.bitauto.com/">合肥</a></li>
+				<li><a href="http://city.bitauto.com/huaibei/">淮北</a></li>
+				<li><a href="http://city.bitauto.com/huainan/">淮南</a></li>
+				<li><a href="http://city.bitauto.com/huangshan/">黄山</a></li>
+				<li><a href="http://city.bitauto.com/liuan/">六安</a></li>
+				<li><a href="http://city.bitauto.com/maanshan/">马鞍山</a></li>
+				<li><a href="http://city.bitauto.com/suzhou/">宿州</a></li>
+				<li><a href="http://city.bitauto.com/tongling/">铜陵</a></li>
+				<li><a href="http://city.bitauto.com/wuhu/">芜湖</a></li>
+				<li><a href="http://city.bitauto.com/xuancheng/">宣城</a></li>
+			</ul>
+		</div>
+	</div>
+  <div class="postion hn">
+		<img src="images/hn.png" alt="" usemap="#MapHn" />
+		<map name="MapHn" id="MapHn">
+		  <area shape="poly" coords="5,15,23,1,39,7,42,8,47,8,49,7,63,15,64,24,61,32,56,37,56,44,63,47,65,67,55,68,55,74,52,73,47,70,38,74,41,75,33,64,17,61,9,60" href="#" id="hn_hot" />
+		</map>
+		<div class="point">
+			<ul class="list">
+				<li><a href="http://changsha.bitauto.com/">长沙</a></li>
+				<li><a href="http://city.bitauto.com/changde/">常德</a></li>
+				<li><a href="http://city.bitauto.com/chenzhou/">郴州</a></li>
+				<li><a href="http://city.bitauto.com/hengyang/">衡阳</a></li>
+				<li><a href="http://city.bitauto.com/huaihua/">怀化</a></li>
+				<li><a href="http://city.bitauto.com/loudi/">娄底</a></li>
+				<li><a href="http://city.bitauto.com/shaoyang/">邵阳</a></li>
+				<li><a href="http://city.bitauto.com/xiangtan/">湘潭</a></li>
+				<li><a href="http://city.bitauto.com/xiangxi">湘西</a></li>
+				<li><a href="http://city.bitauto.com/yiyang/">益阳</a></li>
+				<li><a href="http://city.bitauto.com/yongzhou/">永州</a></li>
+				<li><a href="http://city.bitauto.com/yueyang/">岳阳</a></li>
+				<li><a href="http://city.bitauto.com/zhangjiajie/">张家界</a></li>
+				<li><a href="http://city.bitauto.com/zhuzhou/">株洲</a></li>
+			</ul>
+		</div>
+  </div>
+	<div class="postion sc">
+		<img src="images/sc.png" alt="" border="0" usemap="#MapSc" />
+		<map name="MapSc" id="MapSc">
+		  <area shape="poly" coords="68,89,72,81,81,84,84,91,88,89,93,88,96,92,106,92,106,88,100,84,99,80,101,74,100,71,98,66,98,55,98,46,104,51,109,51,112,44,116,40,116,26,106,21,100,19,92,22,87,22,79,16,64,4,59,4,58,14,45,9,44,20,36,22,29,19,23,20,16,15,11,6,9,4,4,7,4,21,17,50,17,57,17,67,17,77,17,82,25,80,30,85,33,89,37,91,39,102,42,106,49,114,65,99,64,109,58,94" href="#" />
+		</map>
+		<div class="point">
+			<ul class="list">
+				<li><a href="http://city.bitauto.com/aba/">阿坝</a></li>
+				<li><a href="http://city.bitauto.com/bazhong/">巴中</a></li>
+				<li><a href="http://city.bitauto.com/shangluo">成都</a></li>
+				<li><a href="http://city.bitauto.com/dazhou/">达州</a></li>
+				<li><a href="http://city.bitauto.com/deyang/">德阳</a></li>
+				<li><a href="http://city.bitauto.com/ganzi/">甘孜</a></li>
+				<li><a href="http://city.bitauto.com/guangan/">广安</a></li>
+				<li><a href="http://city.bitauto.com/guangyuan/">广元</a></li>
+				<li><a href="http://city.bitauto.com/leshan/">乐山</a></li>
+				<li><a href="http://city.bitauto.com/liangshan/">凉山</a></li>
+				<li><a href="http://city.bitauto.com/luzhou/">泸州</a></li>
+				<li><a href="http://city.bitauto.com/meishan/">眉山</a></li>
+				<li><a href="http://city.bitauto.com/mianyang/">绵阳</a></li>
+				<li><a href="http://city.bitauto.com/neijiang/">内江</a></li>
+				<li><a href="http://city.bitauto.com/nanchong/">南充</a></li>
+				<li><a href="http://city.bitauto.com/panzhihua/">攀枝花</a></li>
+				<li><a href="http://city.bitauto.com/suining/">遂宁</a></li>
+				<li><a href="http://city.bitauto.com/yaan/">雅安</a></li>
+				<li><a href="http://city.bitauto.com/yibin/">宜宾</a></li>
+				<li><a href="http://city.bitauto.com/ziyang/">资阳</a></li>
+				<li><a href="http://city.bitauto.com/zigong/">自贡</a></li>
+			</ul>
+		</div>
+  </div>	
+</div>
+
+<script type="text/javascript">
+var Gnm=function(node){return document.getElementsByTagName(node);}
+var maps = Gnm("map");
+var len  = maps.length;
+function romoveon() {for (var i=0;i<len;i++){maps[i].parentNode.className = maps[i].parentNode.className.replace(" on","");}}
+for (var i=0;i<len;i++){maps[i].onmouseover = function(){romoveon();this.parentNode.className += " on";}}	
+</script>
+</body>
+</html>
